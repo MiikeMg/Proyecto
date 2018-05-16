@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "34c24afd61b02b4412b58ccf8a65a64a",
+=======
+    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -455,6 +459,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v5.6.22",
             "source": {
                 "type": "git",
@@ -465,6 +470,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/637fd797a6dde8d24a9f07da77e375ec251c5d24",
                 "reference": "637fd797a6dde8d24a9f07da77e375ec251c5d24",
+=======
+            "version": "v5.6.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "4e480de7fe51c52573a95b25ebf85f5c7f5d2087"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4e480de7fe51c52573a95b25ebf85f5c7f5d2087",
+                "reference": "4e480de7fe51c52573a95b25ebf85f5c7f5d2087",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 "shasum": ""
             },
             "require": {
@@ -590,7 +607,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2018-05-15T13:34:20+00:00"
+=======
+            "time": "2018-04-30T17:43:38+00:00"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
         },
         {
             "name": "laravel/tinker",
@@ -656,6 +677,7 @@
             "time": "2018-04-16T12:10:37+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravelcollective/html",
             "version": "v5.6.8",
             "source": {
@@ -735,6 +757,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
                 "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
+=======
+            "name": "league/flysystem",
+            "version": "1.0.44",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "168dbe519737221dc87d17385cde33073881fd02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/168dbe519737221dc87d17385cde33073881fd02",
+                "reference": "168dbe519737221dc87d17385cde33073881fd02",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 "shasum": ""
             },
             "require": {
@@ -805,7 +840,11 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
             "time": "2018-05-07T08:44:23+00:00"
+=======
+            "time": "2018-04-06T09:58:14+00:00"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
         },
         {
             "name": "monolog/monolog",
@@ -1818,6 +1857,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
+<<<<<<< HEAD
             "version": "v1.8.0",
             "source": {
                 "type": "git",
@@ -1828,6 +1868,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
                 "reference": "3296adf6a6454a050679cde90f95350ad604b171",
+=======
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 "shasum": ""
             },
             "require": {
@@ -1839,7 +1891,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.8-dev"
+=======
+                    "dev-master": "1.7-dev"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 }
             },
             "autoload": {
@@ -1873,6 +1929,7 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2018-04-26T10:06:28+00:00"
         },
         {
@@ -1887,6 +1944,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/a4576e282d782ad82397f3e4ec1df8e0f0cafb46",
                 "reference": "a4576e282d782ad82397f3e4ec1df8e0f0cafb46",
+=======
+            "time": "2018-01-30T19:27:44+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "8eca20c8a369e069d4f4c2ac9895144112867422"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/8eca20c8a369e069d4f4c2ac9895144112867422",
+                "reference": "8eca20c8a369e069d4f4c2ac9895144112867422",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 "shasum": ""
             },
             "require": {
@@ -1895,7 +1968,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.8-dev"
+=======
+                    "dev-master": "1.7-dev"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 }
             },
             "autoload": {
@@ -1928,7 +2005,11 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2018-04-26T10:06:28+00:00"
+=======
+            "time": "2018-01-31T17:43:24+00:00"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
         },
         {
             "name": "symfony/process",
@@ -2508,6 +2589,7 @@
         },
         {
             "name": "mockery/mockery",
+<<<<<<< HEAD
             "version": "1.1.0",
             "source": {
                 "type": "git",
@@ -2518,6 +2600,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mockery/mockery/zipball/99e29d3596b16dabe4982548527d5ddf90232e99",
                 "reference": "99e29d3596b16dabe4982548527d5ddf90232e99",
+=======
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mockery/mockery.git",
+                "reference": "1bac8c362b12f522fdd1f1fa3556284c91affa38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/1bac8c362b12f522fdd1f1fa3556284c91affa38",
+                "reference": "1bac8c362b12f522fdd1f1fa3556284c91affa38",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                 "shasum": ""
             },
             "require": {
@@ -2526,8 +2620,12 @@
                 "php": ">=5.6.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpdocumentor/phpdocumentor": "^2.9",
                 "phpunit/phpunit": "~5.7.10|~6.5"
+=======
+                "phpunit/phpunit": "~5.7|~6.1"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
             },
             "type": "library",
             "extra": {
@@ -2556,8 +2654,13 @@
                     "homepage": "http://davedevelopment.co.uk"
                 }
             ],
+<<<<<<< HEAD
             "description": "Mockery is a simple yet flexible PHP mock object framework",
             "homepage": "https://github.com/mockery/mockery",
+=======
+            "description": "Mockery is a simple yet flexible PHP mock object framework for use in unit testing with PHPUnit, PHPSpec or any other testing framework. Its core goal is to offer a test double framework with a succinct API capable of clearly defining all possible object operations and interactions using a human readable Domain Specific Language (DSL). Designed as a drop in alternative to PHPUnit's phpunit-mock-objects library, Mockery is easy to integrate with PHPUnit and can operate alongside phpunit-mock-objects without the World ending.",
+            "homepage": "http://github.com/mockery/mockery",
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
             "keywords": [
                 "BDD",
                 "TDD",
@@ -2570,7 +2673,11 @@
                 "test double",
                 "testing"
             ],
+<<<<<<< HEAD
             "time": "2018-05-08T08:54:48+00:00"
+=======
+            "time": "2017-10-06T16:20:43+00:00"
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
         },
         {
             "name": "myclabs/deep-copy",

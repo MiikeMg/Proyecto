@@ -53,7 +53,11 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+<<<<<<< HEAD
                                         {{ __('Salir') }}
+=======
+                                        {{ __('Logout') }}
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

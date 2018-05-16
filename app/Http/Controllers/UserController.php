@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 
 class UserController extends Controller
+<<<<<<< HEAD
 {  
     public function __construct()
     {
@@ -20,4 +21,8 @@ class UserController extends Controller
     }
   
   
+=======
+{
+    
+>>>>>>> a618ce39020c880ccea0a46d36b4f82079f07b40
 }
