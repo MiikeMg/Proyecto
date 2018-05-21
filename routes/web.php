@@ -33,10 +33,9 @@ Route::prefix('/admin')->group(function () {
 			Route::get('/', 'AdminController@createUser');
 			Route::post('/', 'AdminController@store');
 		});
-
+	Route::get('/images', 'ImageController@index')->name('images.index');
 	Route::get('/adminShowArticles', 'AdminController@showArticles');
  });
 Route::resource('/CreateArticle','ArticleController');
-
 Route::get('/editor', 'EditorController@index');
 Route::get('/user', 'UserController@index');
