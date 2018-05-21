@@ -13,14 +13,14 @@
                   @if(Auth::User()->role=='admin')
                     <a href="{{ url('/admin') }}" class="btn btn-xs btn-info pull-right">Menu Administrador</a>
                   @elseif(Auth::User()->role=='editor')
-                   <a href="{{ url('/editor') }}" class="btn btn-xs btn-info pull-right">Menu Editor</a>
+                   <a href="{{ url('CreateArticle') }}" class="btn btn-xs btn-info pull-right">Crear Articulo</a>
                   @else
-                  
+                  <a href="{{ url('CreateArticle') }}" class="btn btn-xs btn-info pull-right">Crear Articulo</a>
                   @endif
                 </div>
 
                 <div class="card-body">
-
+                    @include('articles.searchArticles')
                 </div>
             </div>
         </div>

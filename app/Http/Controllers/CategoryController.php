@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
-class EditorController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class EditorController extends Controller
      */
     public function index()
     {
-        //
+        return view('categories.createCategories');
     }
 
     /**
@@ -34,7 +35,12 @@ class EditorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'max:120|required|unique:categories',
+        ]);
+        $category = new Category($request->all());
+        $category->save();
+        return back()->with('alert', 'Categoria Creada!');
     }
 
     /**

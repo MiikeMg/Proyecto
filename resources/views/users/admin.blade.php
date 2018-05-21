@@ -15,6 +15,8 @@
                   <a href="{{ url('/admin/adminShowArticles') }}" class="btn btn-xs btn-info pull-right">Mostrar Articulos</a>
                   <a href="{{ url('CreateArticle') }}" class="btn btn-xs btn-info pull-right">Crear Articulo</a>
                   <a href="{{ url('admin/images') }}" class="btn btn-xs btn-info pull-right">Imagenes Cargadas</a>
+                  <a href="{{ url('admin/categories') }}" class="btn btn-xs btn-info pull-right">Crear Categorias</a>
+                  <a href="{{ url('admin/categories') }}" class="btn btn-xs btn-info pull-right">Mostrar Categorias</a>
                 </div>
 
                   

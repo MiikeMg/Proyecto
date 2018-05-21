@@ -44,7 +44,7 @@ class ArticleController extends Controller
         $request->validate([
             'title' => 'min:4|max:100|required|unique:articles',
             'category_id' => 'required',
-            'content' => 'min:60|required',
+            'content' => 'min:60|required|max:1600|',
             'image' => 'required|image|mimes:jpeg,png|max:250',
         ]);
         if ($request->file('image')) {

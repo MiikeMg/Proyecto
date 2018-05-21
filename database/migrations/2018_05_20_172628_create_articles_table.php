@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('content');
+            $table->longtext('content');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
           

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Article;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -22,7 +23,15 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('home');
+    { 
+        $id=Auth()->user()->id;
+      $articles = Article::where('user_id', '=', $id)
+          ->paginate(15);
+          $articles->each(function($articles){
+              $articles->category;
+              $articles->user;
+          });
+      return view('home',compact('articles',$articles));
     }
+
 }
