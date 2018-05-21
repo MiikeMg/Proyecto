@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Input;
 use App\User;
+use App\Article;
+use Laracasts\Flash\FlashServiceProvider;
 
 class AdminController extends Controller
 {
@@ -12,7 +14,12 @@ class AdminController extends Controller
     {
         $this->middleware('admin');
     }
+    
+    public function index(){
   
+      return view('users.admin',compact('users'));
+    }
+
     public function showUsers(){
       $users = User::where('name', '!=', '')
           ->paginate(10);
@@ -31,8 +38,9 @@ class AdminController extends Controller
         'role' => 'required',
       ]);
       
-      User::create(request()->all());
-      
+      $user = new User(request()->all());
+      $user->password = bcrypt(request()->password);
+      $user->save();
       return back()->with('alert', 'Usuario Creado!');
     }
     public function edit(User $user){
@@ -54,4 +62,15 @@ class AdminController extends Controller
       $user->delete();
       return back()->with('alert', 'Usuario Eliminado!');
     }
+
+    public function showArticles(){
+      $articles = Article::where('title', '!=', '')
+          ->paginate(10);
+          $articles->each(function($articles){
+              $articles->category;
+              $articles->user;
+          });
+      return view('articles.showArticles',compact('articles',$articles));
+    }
+
 }

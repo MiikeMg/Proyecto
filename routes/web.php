@@ -18,11 +18,25 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/adminShowUsers', 'AdminController@showUsers');
-Route::get('/admin/{user}/adminEditUser', 'AdminController@edit');
-Route::patch('/admin/{user}', 'AdminController@update');
-Route::delete('/admin/{user}', 'AdminController@destroy');
-Route::get('/admin/adminCreateUsers', 'AdminController@createUser');
-Route::post('admin/adminCreateUsers', 'AdminController@store');
+
+Route::prefix('/admin')->group(function () {
+	Route::get('/', 'AdminController@index');
+	Route::get('/adminShowUsers', 'AdminController@showUsers');
+	Route::get('/{user}/adminEditUser', 'AdminController@edit');
+
+		Route::prefix('/{user}')->group(function () {
+			Route::patch('/', 'AdminController@update');
+			Route::delete('/', 'AdminController@destroy');
+		});
+
+		Route::prefix('/adminCreateUsers')->group(function () {
+			Route::get('/', 'AdminController@createUser');
+			Route::post('/', 'AdminController@store');
+		});
+
+	Route::get('/adminShowArticles', 'AdminController@showArticles');
+ });
+Route::resource('/CreateArticle','ArticleController');
+
 Route::get('/editor', 'EditorController@index');
 Route::get('/user', 'UserController@index');

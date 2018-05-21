@@ -11,8 +11,7 @@
                   @endif
                 <div class="card-header">
                   @if(Auth::User()->role=='admin')
-                    <a href="{{ url('/admin/adminShowUsers') }}" class="btn btn-xs btn-info pull-right">Mostrar Usuarios</a>
-                  <a href="{{ url('/admin/adminCreateUsers') }}" class="btn btn-xs btn-info pull-right">Crear Usuarios</a>
+                    <a href="{{ url('/admin') }}" class="btn btn-xs btn-info pull-right">Menu Administrador</a>
                   @elseif(Auth::User()->role=='editor')
                    <a href="{{ url('/editor') }}" class="btn btn-xs btn-info pull-right">Menu Editor</a>
                   @else

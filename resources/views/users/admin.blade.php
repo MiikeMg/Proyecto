@@ -12,7 +12,10 @@
                 <div class="card-header">
                   <a href="{{ url('/admin/adminShowUsers') }}" class="btn btn-xs btn-info pull-right">Mostrar Usuarios</a>
                   <a href="{{ url('/admin/adminCreateUsers') }}" class="btn btn-xs btn-info pull-right">Crear Usuarios</a>
+                  <a href="{{ url('/admin/adminShowArticles') }}" class="btn btn-xs btn-info pull-right">Mostrar Articulos</a>
+                  <a href="{{ url('CreateArticle') }}" class="btn btn-xs btn-info pull-right">Crear Articulo</a>
                 </div>
+
                   
                 <div class="card-body">
                   @yield('content')

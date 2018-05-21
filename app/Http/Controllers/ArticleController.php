@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Tag;
+use App\Article;
+use App\Image;
 
-class EditorController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,8 +16,11 @@ class EditorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $categories = Category::orderBy('name')->pluck('name', 'id');
+        $tags = Tag::orderBy('name')->pluck('name', 'id');
+
+        return view('articles.createArticle')->with('categories', $categories)->with('tags', $tags);
     }
 
     /**
@@ -34,7 +41,27 @@ class EditorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'min:4|max:100|required|unique:articles',
+            'category_id' => 'required',
+            'content' => 'min:60|required',
+            'image' => 'required|image|mimes:jpeg,png|max:250',
+        ]);
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $name = 'img_' . time() . '.' .  $file->getClientOriginalExtension();
+            $path = public_path() . '/images/articles/';
+            $file->move($path, $name);
+        }
+        $article = new Article($request->all());
+        $article->user_id = \Auth::user()->id;
+        $article->save();
+        $article->tags()->sync($request->tags);
+        $image = new Image();
+        $image->name = $name;
+        $image->article()->associate($article);
+        $image->save();
+        return redirect()->back()->with('alert', 'Blog Creado!');
     }
 
     /**

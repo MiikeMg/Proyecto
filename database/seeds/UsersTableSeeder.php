@@ -11,7 +11,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('users')->truncate();
       
       //update users set role='admin' where email='miike@example.com';
       factory(App\User::class,20)->create([
